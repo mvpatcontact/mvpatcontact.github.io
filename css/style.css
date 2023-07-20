@@ -1,0 +1,1191 @@
+/* +++++GENERALITE++++ */
+
+
+/* ++++++++ GENERALITES ++++++++ */
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #282e4a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif;
+    /*  font-family: "Poppins", sans-serif;*/
+    color: #282e4a;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #e84545;
+}
+
+a {
+    color: #e84545;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+}
+
+section {
+    margin-top: 0.1em;
+}
+
+.fa {
+    color: #f1f1f1;
+}
+
+
+/* ++++++++ HEADER-NAVBAR ++++++++ */
+
+
+/* logo*/
+
+.logo {
+    /* nota: un bon logo doit être en png*/
+    width: 50%;
+    height: 100%;
+}
+
+
+/*---fin logo---*/
+
+
+/*navbar*/
+
+.bg-header {
+    /*ajouter "bg-header" pour retrouver la vouleur de css, en cas  de la nav avec boostrap*/
+    background: #282e4a;
+    /*un header fixe*/
+    position: fixed;
+    left: 0;
+    /*avec un largueur de tous les écrans càd 100vw*/
+    width: 100vw;
+    /* avec le overly, il faut ramener le header par z-index*/
+    z-index: 10;
+}
+
+header a {
+    color: #f1f1f1;
+}
+
+header a:hover {
+    color: #e84545;
+}
+
+
+/* ---fin header-navbar --- */
+
+
+/* ++++++++ PRESENTATION ++++++++   */
+
+#presentation {
+    flex-direction: column;
+    /*vh:viewport height, 100 veut dire toute la hauteur de l'Ecran*/
+    /*height: 100vh;*/
+    background: url("../images/banner1.jpg") no-repeat 0 0;
+    height: 800px;
+    background-size: cover;
+    /*image de fond de l'image*/
+    /*position relative permet de fixer le contenu  sur l'étendu containeur*/
+    position: relative;
+    margin-top: 0;
+}
+
+
+/* pour écraser la propriété de départ de h1 et h2*/
+
+#presentation h1,
+#presentation h2 {
+    color: #f1f1f1;
+    /*faire z-index pour que les textes h1 et h2 reviennent avant l'overlay*/
+    z-index: 1;
+}
+
+#presentation h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#presentation h1 span {
+    font-size: 2em;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.liens {
+    /*faire z-index pour que les textes h1 et h2 reviennent avant l'overlay*/
+    z-index: 1;
+    padding-bottom: 10em;
+}
+
+.liens a {
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+    padding-inline-start: 1em;
+}
+
+
+/*  ----overlay, le calque/ presentation----  */
+
+.overlay::before {
+    /* overlay permet de mettre en avant */
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url("../images/noise.png") repeat 0 0 rgba(0, 0, 0, 0.5);
+    /*pour que l'image reste dans sa div, il faut un top=0 et position=absolute*/
+    top: 0;
+    position: absolute;
+}
+
+
+/* ++++++++ NOTRE EQUIPE ++++++++ */
+
+#equipe {
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel {
+    margin: 2% 0;
+}
+
+.vignette {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.5;
+    padding: 0 1.5%;
+}
+
+.vignette.active {
+    /*attention aux classes setrouvant aux mêmes guillaumes*/
+    /*pour agrandir l'image du milieu et annuler l'opacité de 0 à 1*/
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+#equipe .fa {
+    color: black;
+}
+
+.icon-titre {
+    width: 60px;
+    height: 60px;
+    background: orange;
+    transform: rotate(45deg);
+    /*diplay flex pour que l'élément se centre dans la div*/
+    display: flex;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.icon-titre .fa {
+    transform: rotate(-45deg);
+}
+
+#equipe h3,
+#equipe h4 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#equipe p {
+    text-align: center;
+}
+
+
+/* ---Fin équipe --- */
+
+
+/* ++++PARTIE COMPTEUR+++++  */
+
+#compteur {
+    background: url("../images/banner4.jpg") no-repeat 0 0 fixed #000;
+    height: 250px;
+    position: relative;
+    background: cover;
+    /* color: #f1f1f1;*/
+}
+
+#compteur h4 {
+    color: #e84545;
+    font-size: 2.5em;
+}
+
+#compteur h5 {
+    color: #f1f1f1;
+    text-transform: uppercase;
+}
+
+
+/* configuration des icones pour compteur */
+
+.icon-compteur {
+    width: 60px;
+    height: 60px;
+    transform: rotate(0deg);
+    border: 2px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.icon-compteur {
+    transform: rotate(-0deg);
+}
+
+#presentation .icon-compteur {
+    transform: rotate(-45deg);
+}
+
+#presentation .fa {
+    transform: rotate(45deg);
+}
+
+
+/* ----fin compteur--- */
+
+
+/* +++++ PORTFOLIO +++++  */
+
+#portfolio figure {
+    flex: 1;
+    /* pour permettre d'avoir les marges et agrandir automatiquement les images*/
+    position: relative;
+}
+
+#portfolio figcaption {
+    position: absolute;
+    top: 0;
+    color: #d40d92;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-direction met les éléments au   centre du containeur en direction colonne*/
+    flex-direction: column;
+    height: 100%;
+    width: 95%;
+    /*un background qui a un opacité*/
+    background: url("images/noise") repeat 0 0 scroll rgba(0, 0, 0, 0.3);
+    /*rendre le texte invisible et créer   un hover(0) pour faire reapparaitre le texte*/
+    opacity: 0;
+    /*nous ajoutons une transformation  de toutes les propriétés avec transition de 1seconde   lors du hover*/
+    transform: scale(0);
+    transition: all 2s;
+}
+
+#portfolio h5 {
+    color: #f1f1f1;
+}
+
+#portfolio a:hover figcaption {
+    /*rendre le texte visioble par le passage de la souris*/
+    opacity: 1;
+    transform: scale(1);
+}
+
+.effet-hover {
+    overflow: hidden;
+    width: 95%;
+}
+
+#portfolio img {
+    width: 280px;
+    height: 280px;
+}
+
+#portfolio img {
+    transition: all 2s;
+}
+
+#portfolio a:hover img {
+    transform: rotate(360deg) scale(0.5);
+    width: 95%;
+}
+
+#portfolio h3,
+#portfolio h4 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#portfolio p {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* -----fin portfolio------ */
+
+
+/* ++++++++ PERSON-PHOTO ++++++++ */
+
+.vignette2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0.5;
+    padding: 0 1.5%;
+}
+
+#person {
+    background: url("../images/banner4.jpg") no-repeat 0 0 fixed #000;
+    height: 250px;
+    position: relative;
+    background: cover;
+    color: #f1f1f1;
+}
+
+#person h3 {
+    font-weight: 1000 !important;
+}
+
+#person span h3 {
+    text-transform: uppercase;
+}
+
+#person p {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+
+/* configuration des icones pour person */
+
+.icon-person {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    transform: rotate(0deg);
+    border: 2px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.icon-person {
+    transform: rotate(-0deg);
+}
+
+#person .icon-person {
+    transform: rotate(-45deg);
+}
+
+#person .fa {
+    transform: rotate(45deg);
+}
+
+
+/* fin de configuration des cadres des icones pour person */
+
+
+/*--------fin person-----------------*/
+
+
+/* ++++++++ COMPETENCES ++++++++ */
+
+
+/* Le progress bar */
+
+
+/* création générale de div de barre*/
+
+.progress {
+    width: 100%;
+    height: 35px;
+    /*la couleur couvrant la div, càd la background-color*/
+    background-color: rgb(58, 58, 58);
+    /* position est relative càd que les éléments restent à l'intérieur de la div*/
+    position: relative;
+    margin-bottom: 2%;
+}
+
+
+/*création des propriétés de l'animation */
+
+.progress-bar {
+    background: yellow;
+    width: 70%;
+    height: 35px;
+    /* créons un keyframes, nomée "barre-animee" dont les propriétés seront définies*/
+    animation: barre 5s 1;
+    /* vu qu'il y a du text à aligner par justify-content avec un padding*/
+    justify-content: flex-start;
+    text-align: start;
+    padding-left: 2%;
+}
+
+
+/*Créer une animation de 5secondes 1fois de la "barre-animee" par keyframes */
+
+.progress-bar::after {
+    content: "";
+    border-left: 20px solid yellow;
+    border-bottom: 19px solid transparent;
+    border-top: 18px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 70%;
+    /* créer une animation du nom de "triangle" en 5secondes et 1fois dans la "progress-bar" déjà créée*/
+    /*l'animation sera de gauche à 0% jusqu'à 70% de la div*/
+    animation: triangle 5s 1;
+}
+
+
+/* création du keyframes à animer" */
+
+@keyframes barre {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+
+/* Pour bar le bout en triangle jaune*/
+
+@keyframes triangle {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 70%;
+    }
+}
+
+
+/* --fin du 1è bar--- */
+
+
+/* +++++ 2è barre ++++ */
+
+.barre2 {
+    width: 50%;
+    background: green;
+    /* créer une animation du nom de "triangle" en 5secondes et 1fois dans la "progress-bar" déjà créée*/
+    /*l'animation sera de gauche à 0% jusqu'à 50% de la div*/
+    animation: barre2 5s 1;
+}
+
+
+/* le keyframes du 2è barre*/
+
+@keyframes barre2 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+
+/*le triangle du 2è barre*/
+
+@keyframes triangle2 {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 50%;
+    }
+}
+
+
+/*la modification de la position du 2è triangle de la 2è barre*/
+
+.barre2::after {
+    border-left-color: green;
+    left: 50%;
+    /* créer une animation du nom de "triangle" en 5secondes et 1fois dans la "progress-bar" déjà créée*/
+    /*l'animation sera de gauche à 0% jusqu'à 50% de la div*/
+    animation: triangle2 5s 1;
+}
+
+
+/* --fin 2è barre --- */
+
+
+/* +++++ 3è barre ++++ */
+
+.barre3 {
+    width: 95%;
+    background: pink;
+    /* créer une animation du nom de "triangle" en 5secondes et 1fois dans la "progress-bar" déjà créée*/
+    /*l'animation sera de gauche à 0% jusqu'à 95% de la div*/
+    animation: barre3 5s 1;
+}
+
+
+/* le keyframe du 3è barre*/
+
+@keyframes barre3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+
+/*le 3è triangle du 3è barre*/
+
+@keyframes triangle3 {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 95%;
+    }
+}
+
+
+/*la modification de la position du 3è triangle de la 3è barre*/
+
+.barre3::after {
+    border-left-color: pink;
+    left: 95%;
+    /* créer une animation du nom de "triangle" en 5secondes et 1fois dans la "progress-bar" déjà créée*/
+    /*l'animation sera de gauche à 0% jusqu'à 95% de la div*/
+    animation: triangle3 5s 1;
+}
+
+
+/*---fin 3è bar --  */
+
+
+/* +++++ 4è barre ++++ */
+
+.barre4 {
+    width: 25%;
+    background: blueviolet;
+    /* créer une animation du nom de "triangle" en 5secondes et 1fois dans la "progress-bar" déjà créée*/
+    /*l'animation sera de gauche à 0% jusqu'à 25% de la div*/
+    animation: barre4 5s 1;
+}
+
+
+/* le keyframes du 4è barre*/
+
+@keyframes barre4 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 25%;
+    }
+}
+
+
+/*le 4è triangle du 4è barre*/
+
+@keyframes triangle4 {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 25%;
+    }
+}
+
+
+/*la modification de la position du 4è triangle de la 4è barre*/
+
+.barre4::after {
+    border-left-color: blueviolet;
+    left: 25%;
+    /* créer une animation du nom de "triangle" en 5secondes et 1fois dans la "progress-bar" déjà créée*/
+    /*l'animation sera de gauche à 0% jusqu'à 25% de la div*/
+    animation: triangle4 5s 1;
+}
+
+
+/*---fin 4è bar --  */
+
+
+/* ---texte de la barre-- */
+
+.texte-barre {
+    text-transform: uppercase;
+    opacity: 1;
+    color: #000;
+    /* création d'animation du texte du span*/
+    animation: texte-span 7s 1;
+}
+
+
+/* création d'un keyframes lié à l'opacité*/
+
+@keyframes texte-span {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    /*attention, les textes se centrent, donc il faut modifier le css de progress-bar, avec justify-content:flex-start */
+}
+
+
+/* -------fin competences----------- */
+
+
+/* ++++++++ TARIFS ++++++++ */
+
+#tarifs h4 {
+    margin-top: 1em;
+}
+
+#tarifs p {
+    text-align: center;
+}
+
+#tarifs {
+    background: #f0f0f0;
+}
+
+.tarifs {
+    margin-top: 2.5em;
+}
+
+#tarifs article {
+    background: #ffffff;
+    border-left: 1px solid rgb(231, 229, 229);
+    padding: 2em;
+    margin-bottom: 3em;
+    /*la "position relative" permet de positionner ses les éléments en "position abslolue"*/
+    position: relative;
+    /*margin-top, pour espacer l'article , son carré (qui déborde) et le paragraphe*/
+    margin-top: 4em;
+}
+
+#tarifs article .formule {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+
+#tarifs article .price {
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+}
+
+#tarifs article .unite {
+    color: white;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+#tarifs article .business {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+#tarifs article p {
+    font-size: 1em;
+    color: black;
+    padding-top: 0.1em;
+    position: relative;
+    top: -17%
+}
+
+#tarifs article p .produit {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* configuration des icones pour tarifs */
+
+#tarifs .icon-tarifs {
+    /*les tailles du carré*/
+    width: 80px;
+    height: 80px;
+    background: orange;
+    /*on positionne l'icon par "boustrap de justify-content-center" et on on aligne le contenu au centre en html*/
+    position: absolute;
+    /*positionner l'icon sur la bordure de l'article en absolu par rapport à son parent càd "article" ce qui veut dire que le parent doit être en "position relavive"*/
+    top: -24%;
+    left: 30%;
+    padding-top: 10%;
+}
+
+#tarifs .icon-tarifs {
+    transform: rotate(-45deg);
+    position: relative;
+}
+
+#tarifs .icon-tarifs.business {
+    /*attention aux classes qui sont spéciphiques*/
+    background: black;
+}
+
+#tarifs h6 {
+    transform: rotate(45deg);
+    text-align: center;
+}
+
+
+/* configuration du boutton "souscrire" pour tarifs */
+
+.myButton {
+    box-shadow: inset 0px 1px 0px 0px #f9eca0;
+    background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+    background-color: #f0c911;
+    border-radius: 6px;
+    border: 1px solid #e65f44;
+    display: inline-block;
+    cursor: pointer;
+    color: #c92200;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ded17c;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+    background-color: #f2ab1e;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/*-fin du boutton tarifs--*/
+
+
+/* --------fin tarifs ------- */
+
+
+/* ++++++++ EXPERIENCE ++++++++ */
+
+#experience h3 {
+    font-weight: 1000 !important;
+}
+
+#experience h4 {
+    font-weight: 1000 !important;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#experience h5 {
+    font-weight: 1000 !important;
+    text-transform: uppercase;
+    color: royalblue;
+    font-size: 0.7em;
+}
+
+#experience p {
+    font-size: 0.8em;
+}
+
+
+/* configuration des icones pour experience */
+
+.icon-experience {
+    width: 60px;
+    height: 60px;
+    background-color: royalblue;
+    transform: rotate(0deg);
+    border: 2px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.icon-experience {
+    transform: rotate(-0deg);
+}
+
+#experience .icon-experience {
+    transform: rotate(-45deg);
+}
+
+#experience .fa {
+    transform: rotate(45deg);
+}
+
+
+/*--fin icon-experience-- */
+
+
+/* ---fin experience---*/
+
+
+/* ++++++++ FORMATION ++++++++ */
+
+#formation h3 {
+    font-weight: 1000 !important;
+}
+
+#formation h4 {
+    font-weight: 1000 !important;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#formation h5 {
+    font-weight: 1000 !important;
+    text-transform: uppercase;
+    color: orchid;
+    font-size: 0.7em;
+}
+
+#formation p {
+    font-size: 0.8em;
+}
+
+
+/* configuration des icones pour formation */
+
+.icon-formation {
+    width: 60px;
+    height: 60px;
+    background-color: orchid;
+    transform: rotate(0deg);
+    border: 2px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.icon-formation {
+    transform: rotate(-0deg);
+}
+
+#formation .icon-formation {
+    transform: rotate(-45deg);
+}
+
+#formation .fa {
+    transform: rotate(45deg);
+}
+
+
+/*--fin icon-formation-- */
+
+
+/* ---fin formation---*/
+
+
+/* +++++++ UTILISATEUR TWITTER ++++++++ */
+
+#utilisateur {
+    background: url("images/banner2.jpg") no-repeat 0 0 fixed #000;
+    height: 350px;
+    position: relative;
+    background: cover;
+    color: #f1f1f1;
+}
+
+#utilisateur p {
+    color: #f1f1f1;
+    font-style: italic;
+    text-align: center;
+}
+
+#utilisateur p span {
+    color: yellow
+}
+
+
+/* configuration des icones pour utilisateur */
+
+.icon-utilisateur {
+    width: 60px;
+    height: 60px;
+    transform: rotate(-45deg);
+    border: 2px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+#utilisateur .fa {
+    transform: rotate(45deg);
+}
+
+
+/* ---fin utilisateur twitter ----*/
+
+
+/* +++++++ NOS ACTUALITES +++++++  */
+
+#actualites {
+    background: #f0f0f0;
+}
+
+.actu {
+    margin-top: 2.5em;
+}
+
+#actualites p {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+#actualites article {
+    background: #ffffff;
+    border-top: 5px solid #e84545;
+    padding: 1em;
+    margin-bottom: 3em;
+    /*la "position relative" permet de positionner ses les éléments en "position abslolue"*/
+    position: relative;
+    /*margin-top, pour espacer l'article , son carré (qui déborde) et le paragraphe*/
+    margin-top: 1em;
+}
+
+#actualites article a {
+    font-size: 0.7em;
+}
+
+#actualites article span {
+    font-size: 0.7em;
+}
+
+#actualites article p {
+    font-size: 0.9em;
+}
+
+#actualites article a .fa {
+    color: red;
+}
+
+#actualites .icon-article {
+    background: #e84545;
+    /*on positionne l'icon par "boustrap de justify-content-center" et
+on on aligne le contenu au centre en html*/
+    position: absolute;
+    /*positionner l'icon sur la bordure de l'article en absolu par rapport 
+à son parent càd "article" ce qui veut dire que le parent doit être en "position relavive"*/
+    top: -14%;
+    left: 43%;
+    /*modifier les tailles du carré*/
+    width: 40px;
+    height: 40px;
+}
+
+#actualites .icon-titre.icon-article i {
+    /*attention aux espaces entre actualités et .icon-article ; et le sans espace entre .icone-titre.icone-article: veut dire que l'"icon-article" est au même niveau que "icon-titre" en d'autres termes, nous ciblons la balise "i"*/
+    font-size: 1.4em;
+}
+
+#actualites figure {
+    /*pour gérer la marge des images*/
+    margin-bottom: -8.4%;
+}
+
+#actualites h4 {
+    margin-top: 1em;
+}
+
+#actualites p.special {
+    color: #f1f1f1;
+    text-transform: uppercase;
+    background-color: #e84545;
+    position: relative;
+    padding-bottom: 2em;
+    margin-bottom: -6%;
+}
+
+#actualites figure {
+    padding-top: 1em;
+}
+
+
+/* le carré est géré par "icon-article" dont il faut redimentionner */
+
+
+/* ----fin actualités ------ */
+
+
+/* ++++ TARIFAIRES ++++ */
+
+
+/* -----fin tarifaires -----*/
+
+
+/* +++ SOCIETES +++ */
+
+#societes h3 {
+    font-weight: 1000 !important;
+    ;
+}
+
+#societes p {
+    text-align: center;
+}
+
+
+/* ----fin societes ---- */
+
+
+/* ++++++++ MAP ++++++++ */
+
+
+/* il faut enlever le width notre carte doit prendre toute la largueur de la page*/
+
+#map {
+    flex-direction: column;
+    /*nous changeons le sens du flex de la class row de boostrap*/
+}
+
+.bandeau {
+    background: #e84545;
+}
+
+.bandeau h6 {
+    color: #f1f1f1;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 1.5em;
+}
+
+#map h6 span {
+    font-weight: 1000 !important;
+    ;
+}
+
+
+/* ----fin map---- */
+
+
+/* +++++RESTEZ EN CONTACT+++++ */
+
+#contact {
+    width: 100%;
+}
+
+#contact form,
+#contact textarea {
+    width: 100%;
+}
+
+input[type="submit"] {
+    width: 100%;
+}
+
+#contact .petit {
+    width: 75%;
+    text-align: center;
+}
+
+
+/* ----fin contact ---*/
+
+
+/* +++FOOTER+++ */
+
+footer {
+    flex-direction: column;
+    background: #282e4a;
+    color: #f1f1f1;
+    border: 5px solid #e84545;
+    margin: 3em 0;
+    padding-bottom: 1.5em;
+}
+
+footer h6 {
+    color: #f1f1f1;
+    font-size: 1em;
+}
+
+.social .fa {
+    color: #e84545;
+    transform: rotate(180deg);
+}
+
+.etiquette {
+    width: 10em;
+    background: #e84545;
+    padding: 1em;
+    border-radius: 0 3% 3%;
+    margin-bottom: 2.5em;
+}
+
+
+/* le carré sur les icones du  social*/
+
+.social span {
+    /*on doit ramène les propriétés de "icon-titre" déjà faites */
+    width: 50px;
+    height: 50px;
+    background: #e84545;
+    transform: rotate(45deg);
+    margin: 0.7em;
+    /*diplay flex pour que l'élément se centre dans la div*/
+    /* Attention:on ajoute le display:flex car la class"social" en en row sur l'axe principal vertical*/
+    display: flex;
+    /* on centre et aligne les icones par justify et align*/
+    justify-content: center;
+    align-items: center;
+}
+
+.social .fa {
+    transform: rotate(-45deg);
+    color: #f1f1f1;
+}
+
+
+/*fin du carré*/
+
+
+/* le hover sur les icon des réseaux*/
+
+.social span:hover {
+    background: #282e4a;
+    border: 1px solid #e84545;
+}
+
+
+/* ------fin footer ------- */

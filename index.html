@@ -1,17 +1,802 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV-WEBMASTER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--Style des caractères-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet" />
+
+    <!--style des icônes-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!--Boostrap4.0.0  (le link doit être avant les autres styles css)-->
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" />
+
+    <!--style perso(les css pers
+        o se mettent en dernier)-->
+    <!--style css-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--responsive css-->
+    <link rel="stylesheet" href="responsive/responsive.css" />
+
 </head>
+
 <body>
-    <h1>TestOne-Git</h1>
-    <h2>V2</h2>
-    <p>1-Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, velit odit. Laborum culpa iste enim omnis optio sapiente doloremque, rerum ea ratione perferendis praesentium, ipsa eligendi fuga magnam laboriosam repellat.</p>
-    <p>2-Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, velit odit. Laborum culpa iste enim omnis optio sapiente doloremque, rerum ea ratione perferendis praesentium</p>
-    <p>3-Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <p>5-Saluto</p>
+    <main class="container-fluid">
+        <header class="row">
+            <!--cette navbar vient du site de boutstratp4.0 beta2 : https://getbootstrap.com/docs/4.0/components/navbar/-->
+            <nav class="navbar navbar-expand-xl navbar-dark bg-header fixed-top">
+                <!--fixed-top permet de fixer le navbar avec la largueur totale, et reconfigurer la classe "bg-header" ou "bg-danger" -->
+                <a class="navbar-brand" href="index.html"><img src="images/Logo.jpg" class="logo" alt="image de la société" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>                    
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!--cette div est en relation avec le bouton de la navbar-->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home 
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <section id="presentation" class="row align-items-center justify-content-center overlay">
+            <h1>
+                Designer cv-webmaster<br />
+                <span>EXPERT</span>
+            </h1>
+            <h2>Nos compétences à vos services</h2>
+            <div class="liens">
+                <a href="#">Plus de détails</a>
+
+                <a href="#"> Télécharger le détail</a>
+            </div>
+            <div class="icon-compteur">
+                <i class="fa fa-level-down fa-3x" aria-hidden="true"></i>
+            </div>
+        </section>
+        <section id="equipe" class="row">
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <div class="icon-titre justify-content-center align-items-center">
+                    <i class="fa fa-users fa-3x" arial-hidden="true"></i>
+                    <!--nous créons la classe flex dans css-->
+                    <!--offset c'est la classe de décallages dans bootstrap-->
+                </div>
+                <div class="carousel">
+                    <h3>Notre équipe de</h3>
+                    <h4>Web designer</h4>
+                </div>
+                <div class="carousel">
+                    <!--carousel voir bootstrap-->
+                    <img src="images/me4.jpg" alt="m4" title="photo" class="vignette" />
+                    <img src="images/me.jpg" alt="me" title="photo" class="vignette active" />
+                    <img src="images/me2.jpg" alt="m2" title="photo" class="vignette" />
+                </div>
+                <div class="carousel">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                <div class="liens">
+                    <a href="#"><i class="fa fa-cloud-download fa-3x" aria-hidden="true"></i>Télécharger</a>
+                    <a href="#"><i class="fa fa-mobile fa-3x" aria-hidden="true"></i>Contactez-nous</a>
+                </div>
+            </div>
+        </section>
+        <section id="compteur" class="row align-items-center overlay">
+            <div class="col-md-2 offset-md-2 text-center">
+                <!--un div qui fait 2 colonnes de taille md-2,  et  avec offset comme colonne droit vide-->
+                <div class="icon-compteur">
+                    <i class="fa fa-clock-o fa-2x" arial-hidden="true"></i>
+                </div>
+                <h4>1500</h4>
+                <h5>Heures de travail</h5>
+            </div>
+            <div class="col-md-2 text-center">
+                <!--un div qui fait 2 colonnes-->
+                <div class="icon-compteur">
+                    <i class="fa fa-user-plus fa-2x" arial-hidden="true"></i>
+                </div>
+                <h4>45</h4>
+                <h5>Tasses de café</h5>
+            </div>
+            <div class="col-md-2 text-center">
+                <!--un div qui fait 2 colonnes-->
+                <div class="icon-compteur">
+                    <i class="fa fa-coffee fa-2x" arial-hidden="true"></i>
+                </div>
+                <h4>178</h4>
+                <h5>Projets réalisés</h5>
+            </div>
+            <div class="col-md-2 text-center">
+                <!--un div qui fait 2 colonnes-->
+                <div class="icon-compteur">
+                    <i class="fa fa-rocket fa-2x" arial-hidden="true"></i>
+                </div>
+                <h4>32</h4>
+                <h5>Clients satisfaits</h5>
+            </div>
+        </section>
+        <section id="portfolio" class="row">
+            <!--Céation d'une ligne, par class=row"-->
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <!--La ligne est divisée en 8 colonnes avec offset de taille md-2-->
+                <div class="icon-titre justify-content-center align-items-center">
+                    <i class="fa fa-pencil fa-3x" arial-hidden="true"></i>
+                </div>
+                <h3>Porfolio</h3>
+                <h4>Lorem ibsum dolor</h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="row">
+                    <!--Nous créons une div avec une class "row" pour les galeries à l'intérieure de 8 colonnes-->
+                    <!--avec 2 div, il y aura 2 lignes de 3 images-->
+                    <figure>
+                        <a href="#">
+                            <div class="effet-hover">
+                                <img src="images/work1.jpg" alt="work1" />
+                            </div>
+                            <figcaption class="text-center">
+                                <p>1 mars 2015</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#">
+                            <div class="effet-hover">
+                                <img src="images/work2.jpg" alt="work2" />
+                            </div>
+                            <figcaption class="text-center">
+                                <p>17 mars 2015</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#">
+                            <div class="effet-hover">
+                                <img src="images/work3.jpg" alt="work3" />
+                            </div>
+                            <figcaption class="text-center">
+                                <p>15 mars 2015</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                </div>
+                <div class="row">
+                    <figure>
+                        <a href="#">
+                            <div class="effet-hover">
+                                <img src="images/work4.jpg" alt="work4" />
+                            </div>
+                            <figcaption class="text-center">
+                                <p>22 déc 2015</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#">
+                            <div class="effet-hover">
+                                <img src="images/work5.jpg" alt="work5" />
+                            </div>
+                            <figcaption class="text-center">
+                                <h5>Titre du projet</h5>
+                                <p>27 déc 2015</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+
+                    <figure>
+                        <a href="#">
+                            <div class="effet-hover">
+                                <img src="images/work6.jpg" alt="work6" />
+                            </div>
+                            <figcaption>
+                                <h5>Titre du projet</h5>
+                                <p>2 mars 2015</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                </div>
+            </div>
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <p>Plus...</p>
+            </div>
+        </section>
+        <!---->
+        <section id="person" class="row align-items-center overlay">
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <div class="justify-content-center align-items-center">
+                    <img src="images/person1.jpg" alt="Maphoto" class="vignette2 active" />
+                </div>
+                <h3>Non et prénom</h3>
+                <div class="row  justify-content-between">
+                    <!--cette div a 3 colonnes-->
+                    <div class="col-md-2">
+                        <!--1è colonne-->
+                        <article class="icon-person justify-content-center align-items-center">
+                            <i class="fa fa-chevron-left fa-2x " arial-hidden="true "></i>
+                        </article>
+                    </div>
+                    <div class="col-md-8">
+                        <!--2è colonne-->
+                        <article class="">
+                            <p>Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-2">
+                        <!--3è colonne-->
+                        <article class="icon-person justify-content-center align-items-center">
+                            <i class="fa fa-chevron-right fa-2x " arial-hidden="true "></i>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--fin section person-->
+
+        <section id="competences" class="row">
+            <!--il faut créer la classe "row" càd une ligne à diviser en colonnes-->
+            <div class="row col-md-8 offset-md-2">
+                <!--Dans 1 ligne, créons 2 colonnes à gauche et à droite avec 8 colonnes au milieu-->
+                <div class="col-md-6">
+                    <!--1div de 6 colonnes-->
+                    <h4>Pourquoi nous choisir?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis magna a congue luctus. Curabitur eget faucibus velit. Ut dapibus venenatis enim id auctor. Morbi pharetra, mauris at consequat blandit.</p>
+                </div>
+                <div class="col-md-6">
+                    <!--1div de 6 colonnes-->
+                    <h5>Compétences</h5>
+                    <!--containeur type des bars-->
+                    <!--fin progress bar1-->
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <span class="texte-barre">Html css3</span>
+                        </div>
+                    </div>
+                    <!--fin progress bar1-->
+                    <!--fin progress bar2-->
+                    <div class="progress">
+                        <div class="progress-bar barre2">
+                            <span class="texte-barre">Photosop</span>
+                        </div>
+                    </div>
+                    <!--fin progress bar2-->
+                    <!--progress bar3-->
+                    <div class="progress">
+                        <!--containeur des bars-->
+                        <div class="progress-bar barre3">
+                            <span class="texte-barre">Ilustrator</span>
+                        </div>
+                    </div>
+                    <!--fin de progess bar3-->
+                    <!--progress bar4-->
+                    <div class="progress">
+                        <!--containeur des bars-->
+                        <div class="progress-bar barre4">
+                            <span class="texte-barre">Java script</span>
+                        </div>
+                    </div>
+                    <!--fin de progess bar4-->
+                </div>
+                <!--fin des progress bars-->
+            </div>
+            <!--fin du bloc qui a 2 colonnes (en div) de 6 colonnes chacune-->
+        </section>
+        <!--Fin de la section competences-->
+        <section id="societes" class="row">
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <div class="icon-titre justify-content-center align-items-center">
+                    <i class="fa fa-building fa-2x" arial-hidden="true"></i>
+                </div>
+                <h3>Ces sociétés</h3>
+                <h5>Nous font confiance</h5>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="row justify-content-between">
+                    <!--3 colonnes-->
+                    <div class="col-md-2">
+                        <!--1è tarif-->
+                        <article id="tarif"><img src="images/client1.png" alt="tarif1" class="img-fluid" /></article>
+                    </div>
+                    <div class="col-md-2">
+                        <!--2è tarif-->
+                        <article id="tarif"><img src="images/client2.png" alt="tarif2" class="img-fluid" /></article>
+                    </div>
+                    <div class="col-md-2">
+                        <!--3è tarif-->
+                        <article id="tarif"><img src="images/client3.png" alt="tarif3" class="img-fluid" /></article>
+                    </div>
+                    <div class="col-md-2">
+                        <!--4è tarif-->
+                        <article id="tarif"><img src="images/client4.png" alt="tarif4" class="img-fluid" /></article>
+                    </div>
+                    <div class="col-md-2">
+                        <!--5è tarif-->
+                        <article id="tarif"><img src="images/client5.png" alt="tarif5" class="img-fluid" /></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section de experience-->
+        <section id="experience" class="row">
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <div class="icon-experience justify-content-center align-items-center">
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                </div>
+                <h3>Expérience</h3>
+                <h5>Lorem ipsum dolor</h5>
+                <div class="row offset-md-2 justify-content-between">
+                    <!--3 colonnes-->
+                    <div class="col-md-3">
+                        <!--1è colonne-->
+                        <article>
+                            <h3>2015</h3>
+                        </article>
+                    </div>
+                    <div class="col-md-3">
+                        <!--2è colonne-->
+                        <article class="icon-experience justify-content-center align-items-center">
+                            <i class="fa fa-graduation-cap fa-1x" arial-hidden="true"></i>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <!--3è colonne-->
+                        <article>
+                            <h4>Expérience</h4>
+                            <h5>Lorem ipsum dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="row offset-md-2 justify-content-between">
+                    <!--3 colonnes-->
+                    <div class="col-md-3">
+                        <!--1è colonne-->
+                        <article>
+                            <h3>2014</h3>
+                        </article>
+                    </div>
+                    <div class="col-md-3">
+                        <!--2è colonne-->
+                        <article class="icon-experience justify-content-center align-items-center">
+                            <i class="fa fa-graduation-cap fa-1x" arial-hidden="true"></i>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <!--3è colonne-->
+                        <article>
+                            <h4>Expérience</h4>
+                            <h5>Lorem ipsum dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="row offset-md-2 justify-content-between">
+                    <!--3 colonnes-->
+                    <div class="col-md-3">
+                        <!--1è colonne-->
+                        <article>
+                            <h3>2013</h3>
+                        </article>
+                    </div>
+                    <div class="col-md-3">
+                        <!--2è colonne-->
+                        <article class="icon-experience justify-content-center align-items-center">
+                            <i class="fa fa-graduation-cap fa-1x" arial-hidden="true"></i>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <!--3è colonne-->
+                        <article>
+                            <h4>Expérience</h4>
+                            <h5>Lorem ipsum dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="row offset-md-2 justify-content-between">
+                    <!--3 colonnes-->
+                    <div class="col-md-3">
+                        <!--1è colonne-->
+                        <article>
+                            <h3>2012</h3>
+                        </article>
+                    </div>
+                    <div class="col-md-3">
+                        <!--2è colonne-->
+                        <article class="icon-experience justify-content-center align-items-center">
+                            <i class="fa fa-graduation-cap fa-1x" arial-hidden="true"></i>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <!--3è colonne-->
+                        <article>
+                            <h4>Expérience</h4>
+                            <h5>Lorem ipsum dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section de notre formation-->
+        <section id="formation" class="row">
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <div class="icon-formation justify-content-center align-items-center">
+                    <i class="fa fa-briefcase fa-1x" arial-hidden="true"></i>
+                </div>
+                <h3>Notre formation</h3>
+                <h5>Lorem ipsum dolor</h5>
+                <div class="row offset-md-2 justify-content-between">
+                    <!--Cette ligne a 3 colonnes-->
+                    <div class="col-md-3">
+                        <!--1è colonne-->
+                        <article>
+                            <h3>2015</h3>
+                        </article>
+                    </div>
+                    <div class="col-md-3">
+                        <!--2è colonne-->
+                        <article class="icon-formation justify-content-center align-items-center">
+                            <i class="fa fa-briefcase fa-1x" arial-hidden="true"></i>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <!--3è colonne-->
+                        <article>
+                            <h4>Formation</h4>
+                            <h5>Lorem ipsum dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="row offset-md-2 justify-content-between">
+                    <!--Cette ligne a 3 colonnes-->
+                    <div class="col-md-3">
+                        <!--1è colonne-->
+                        <article>
+                            <h3>2014</h3>
+                        </article>
+                    </div>
+                    <div class="col-md-3">
+                        <!--2è colonne-->
+                        <article class="icon-formation justify-content-center align-items-center">
+                            <i class="fa fa-briefcase fa-1x" arial-hidden="true"></i>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <!--3è colonne-->
+                        <article>
+                            <h4>Formation</h4>
+                            <h5>Lorem ipsum dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="row offset-md-2 justify-content-between">
+                    <!--Cette ligne a 3 colonnes-->
+                    <div class="col-md-3">
+                        <!--1è colonne-->
+                        <article>
+                            <h3>2013</h3>
+                        </article>
+                    </div>
+                    <div class="col-md-3">
+                        <!--2è colonne-->
+                        <article class="icon-formation justify-content-center align-items-center">
+                            <i class="fa fa-briefcase fa-1x" arial-hidden="true"></i>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <!--3è colonne-->
+                        <article>
+                            <h4>Formation</h4>
+                            <h5>Lorem ipsum dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="row offset-md-2 justify-content-between">
+                    <!--Cette ligne a 3 colonnes-->
+                    <div class="col-md-3">
+                        <!--1è colonne-->
+                        <article>
+                            <h3>2012</h3>
+                        </article>
+                    </div>
+                    <div class="col-md-3">
+                        <!--2è colonne-->
+                        <article class="icon-formation justify-content-center align-items-center">
+                            <i class="fa fa-briefcase fa-1x" arial-hidden="true"></i>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <!--3è colonne-->
+                        <article>
+                            <h4>Formation</h4>
+                            <h5>Lorem ipsum dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section de twitter-->
+        <section id="utilisateur" class="row align-items-center overlay">
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <div class="icon-utilisateur justify-content-center align-items-center">
+                    <i class="fa fa-twitter fa-3x" arial-hidden="true"></i>
+                </div>
+                <p> Lorem ipsum dolor sit amet,<span>@ owlcit</span> adipiscing elit, sed do eiusmod
+                    <br> tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+
+                <p> Dans 3jours de
+                    <span>patrick1mv@twitter</span>
+                </p>
+            </div>
+        </section>
+        <section id="actualites" class="row">
+            <div class="flex col-md-8 offset-md-2 align-items-center actu">
+                <div class="icon-titre justify-content-center align-items-center">
+                    <i class="fa fa-newspaper-o fa-3x" arial-hidden="true"></i>
+                </div>
+                <h3>Nos Actualités</h3>
+                <h4>Avec notre équipe</h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="row justify-content-between">
+                    <!--Cette ligne 3 colonnes-->
+                    <div class="col-md-4">
+                        <!--1è colonne-->
+                        <article>
+                            <!--1è article de la 1è colonne-->
+                            <div class="icon-titre icon-article justify-content-center align-items-center">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <h4>Lorem ipsum dolor</h4>
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Administrateur A1C1</a>
+                            <a href="#"><i class="fa fa-file" aria-hidden="true"></i>Catégorie</a>
+                            <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Commentaires</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+                            <hr />
+                            <span>29 Novembre 2015</span>
+                            <!--fin 1è article 1è colonne-->
+                        </article>
+                        <figure>
+                            <!--l'image est au dessus de la 2è article 1écolonne-->
+                            <img src="images/news2.jpg" alt="news" class="img-fluid" />
+                            <!--En boostrap, voir la classe, dans content, images, pour mettre l'image dans son parent qui est la colonne-->
+                        </figure>
+                        <article>
+                            <!--2è article de la 1è colonne-->
+                            <div class="icon-titre icon-article justify-content-center align-items-center">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <h4>Lorem ipsum dolor</h4>
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Administrateur A3C3</a>
+                            <a href="#"><i class="fa fa-file" aria-hidden="true"></i>Catégorie</a>
+                            <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Commentaires</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+                            <hr />
+                            <span>29 Novembre 2015</span>
+                            <!--fin 2è article 1è colonne-->
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <!--2è colonne-->
+                        <figure>
+                            <img src="images/news1.jpg" alt="" class="img-fluid" />
+                            <!--En boostrap, voir la classe, dans content, images, pour mettre l'image dans son parent qui est la colonne-->
+                        </figure>
+                        <article>
+                            <!--1è article de la 2è colonne-->
+                            <div class="icon-titre icon-article justify-content-center align-items-center">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <h4>Lorem ipsum dolor</h4>
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Administrateur A1C2</a>
+                            <a href="#"><i class="fa fa-file" aria-hidden="true"></i>Catégorie</a>
+                            <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Commentaires</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+                            <hr />
+                            <span>29 Novembre 2015</span>
+                            <!--fin 1è article 2è colonne-->
+                        </article>
+                        <div>
+                            <p class="special">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <article>
+                            <!--2è article de la 2è colonne-->
+                            <div class="icon-titre icon-article justify-content-center align-items-center">
+                                <!--on positionne l'icon par "boustrap de justify-content-center" et on on aligne le contenu au centre en html-->
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <h4>Lorem ipsum dolor</h4>
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Administrateur A2C2</a>
+                            <a href="#"><i class="fa fa-file" aria-hidden="true"></i>Catégorie</a>
+                            <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Commentaires</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+                            <hr />
+                            <span>29 Novembre 2015</span>
+                            <!--fin 2è article 1è colonne-->
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <!--3è colonne-->
+                        <article>
+                            <!--1è article de la 3è colonne-->
+                            <div class="icon-titre icon-article justify-content-center align-items-center">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <h4>Lorem ipsum dolor</h4>
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Administrateur A1C3</a>
+                            <a href="#"><i class="fa fa-file" aria-hidden="true"></i>Catégorie</a>
+                            <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Commentaires</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+                            <hr />
+                            <span>29 Novembre 2015</span>
+                            <!--fin 1è article 3è colonne-->
+                        </article>
+                        <article>
+                            <!--2è article de la 3è colonne-->
+                            <div class="icon-titre icon-article justify-content-center align-items-center">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <h4>Lorem ipsum dolor</h4>
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Administrateur A2C3</a>
+                            <a href="#"><i class="fa fa-file" aria-hidden="true"></i>Catégorie</a>
+                            <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i> Commentaires</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+                            <hr />
+                            <span>29 Novembre 2015</span>
+                            <!--fin 2è article 1è colonne-->
+                        </article>
+                    </div>
+                </div>
+                <p> Plus de détails</p>
+                <!--ce dernieer paragraphe a comme parent div class="flex col-md-8 offset-md-2 align-items-center actu" -->
+            </div>
+        </section>
+
+        <section id="societes" class="row">
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <div class="icon-titre justify-content-center align-items-center">
+                    <i class="fa fa-building fa-2x" arial-hidden="true"></i>
+                </div>
+                <h3>Ces sociétés</h3>
+                <h4>Nous font confiance</h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                <div class="row justify-content-between">
+                    <!--Cette ligne a 3 colonnes-->
+
+                    <div class="col-md-2">
+                        <!--1è tarif-->
+                        <article id="tarif"><img src="images/client1.png" alt="tarif1" class="img-fluid" />tarif1</article>
+                    </div>
+                    <div class="col-md-2">
+                        <!--2è tarif-->
+                        <article id="tarif"><img src="images/client2.png" alt="tarif2" class="img-fluid" />tarif2</article>
+                    </div>
+                    <div class="col-md-2">
+                        <!--3è tarif-->
+                        <article id="tarif"><img src="images/client3.png" alt="tarif3" class="img-fluid" />tarif3</article>
+                    </div>
+                    <div class="col-md-2">
+                        <!--4è tarif-->
+                        <article id="tarif"><img src="images/client4.png" alt="tarif4" class="img-fluid" />tarif4</article>
+                    </div>
+                    <div class="col-md-2">
+                        <!--5è tarif-->
+                        <article id="tarif"><img src="images/client5.png" alt="tarif5" class="img-fluid" />tarif5</article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="map" class="row">
+            <!--La carte est dans une ligne complète-->
+            <div class="bandeau text-center">
+                <!--ajoutons à la classe bandeau, la classe de boostrap de text-center -->
+                <h6><span>Visite</span> sur rendez-vous</h6>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.5288983205833!2d-0.5747638851073742!3d44.83116128348074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527c80bba3a63%3A0xd53fdb9147d717e1!2sPl.%20de%20la%20Victoire%2C%2033000%20Bordeaux!5e0!3m2!1sfr!2sfr!4v1646705937787!5m2!1sfr!2sfr"
+                height="450" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+        <section id="contact" class="row">
+            <div class="flex col-md-8 offset-md-2 align-items-center">
+                <div class="icon-titre justify-content-center align-items-center">
+                    <i class="fa fa-mobile fa-3x" arial-hidden="true"></i>
+                </div>
+                <h3>Restez en contact</h3>
+                <h4>Avec notre équipe</h4>
+                <p class="petit">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <form action="#" method="post">
+                    <!--au départ, les éléments sont de type en ligne. il faut appliquer boostrap, dans components-formulaires avec un ajout de <p> à chaque élément -->
+                    <p>
+                        <input name="nom" class="form-control" type="text" placeholder="Votre Nom" />
+                    </p>
+                    <p>
+                        <input type="email" class="form-control" type="text" placeholder="Votre email" />
+                    </p>
+                    <p>
+                        <textarea name="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+                    </p>
+
+                    <p>
+                        <input type="submit" class="btn btn-danger" value="Envoyer un message" />
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!--1è cas, Utilisation de Bootstrap et JS en local-->
+    <script src="jquery.min.js "></script>
+    <script type="text/javascript " src="script.js "></script>
+
+    <!--2ècas, d'utilisation de Bootstrap, cest d'utiliser la bibiothèque en ligne de Bootstrap et JS-->
+    <!--JS de boostrap 4.0-->
+    <!--Cette JS, permet d'utuliser la bibliotèque avec le code "data-toggle" et " data-target" de la navbar-->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    -->
+
 </body>
+<footer class="row text-center align-items-center">
+    <div class="etiquette">
+        <h6>suivez-nous</h6>
+    </div>
+    <div class="social row">
+        <!--en créant un span au tour des i, on va le parametrer en css-->
+        <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+        <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+        <span><i class="fa fa-google-plus" aria-hidden="true"></i></span>
+        <span><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+        <span><i class="fa fa-pinterest" aria-hidden="true"></i></span>
+    </div>
+    <div>
+        <p>Design by Patrick1mv@gmail.com 2022-tous drois réservés</p>
+    </div>
+
+</footer>
+
 </html>
